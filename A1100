@@ -1,0 +1,31 @@
+//题目描述：编制一个乘法运算的程序。从键盘读入2个100以内的正整数，进行乘法运算并以竖式输出。
+//输入格式：输入只有一行，是两个用空格隔开的数字，均在1~99之间（含1和99）。
+//输出格式：输出4行或7行，符合乘法的竖式运算格式。
+//题目来源：http://tsinsen.com/A1100
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int x, y;
+	int count1, count2;
+	cin >> x >> y;
+	cout << x << endl;
+	cout << "*" << " "<<y << endl;
+	count1 = x*(y % 10);
+	count2 = x*(y / 10);
+	if (count2 == 0)
+	{
+		cout << "----" << endl;
+		cout << count1 << endl;
+	}
+	else {
+		cout << "----" << endl;
+		cout << count1 << endl;
+		cout << count2 << endl;
+		cout << "----" << endl;
+		cout << count1 + count2 * 10 << endl;
+	}
+    return 0;
+}
+
